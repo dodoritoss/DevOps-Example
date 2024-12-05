@@ -1,7 +1,7 @@
 node {
     // reference to maven
-    // ** NOTE: This 'maven-3.8.7' Maven tool must be configured in the Jenkins Global Configuration.   
-    //def mvnHome = tool 'maven-3.8.7'
+    // ** NOTE: This 'mvn-3.8.7' Maven tool must be configured in the Jenkins Global Configuration.   
+    def mvnHome = tool 'mvn-3.8.7'
 
     // holds reference to docker image
     def dockerImage
@@ -13,9 +13,9 @@ node {
       // Get some code from a GitHub repository
       git 'https://github.com/felipemeriga/DevOps-Example.git'
       // Get the Maven tool.
-      // ** NOTE: This 'maven-3.8.7' Maven tool must be configured
+      // ** NOTE: This 'mvn-3.8.7' Maven tool must be configured
       // **       in the global configuration.           
-      mvnHome = tool 'maven-3.8.7'
+      mvnHome = tool 'mvn-3.8.7'
     }    
   
     stage('Build Project') {
